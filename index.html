@@ -46,11 +46,11 @@
         </div>
       </header>
       <section class="p-3 flex flex-wrap">
-        <div v-if="(index + initialIndex) <= qtd" class="w-1/2 p-3" v-for="index in perPage" :key="index">
+        <div v-if="(index + initialIndex) <= qtd" class="w-1/2 md:w-1/6 p-3" v-for="index in perPage" :key="index">
           <a :href="'imgs/bodas-'+ (index + initialIndex)  +'.jpg'" target="_blank">
             <img
               class="border-2 border-white shadow rounded-lg"
-              :src="'imgs/bodas-'+ (index + initialIndex)  +'.jpg'"
+              :src="'thumbs/bodas-'+ (index + initialIndex)  +'.jpg'"
               :alt="'bodas-'+ (index + initialIndex) +'.jpg'"
               loading="lazy"
             />
@@ -64,7 +64,7 @@
         data() {
           return {
             qtd: 364,
-            perPage: 6,
+            perPage: 18,
             currentPage: 1,
           };
         },
